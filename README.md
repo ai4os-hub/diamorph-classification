@@ -1,4 +1,5 @@
-# Diamorph Detection
+# Diatom classification
+
 [![Build Status](https://jenkins.services.ai4os.eu/buildStatus/icon?job=AI4OS-hub/diamorph-classification/main)](https://jenkins.services.ai4os.eu/job/AI4OS-hub/job/diamorph-classification/job/main/)
 
 Diatom classification at the species level.
@@ -50,8 +51,7 @@ Once the container is up and running, browse to http://0.0.0.0:5000/ui to get th
 ├─ README.md              <- README for developers and users
 │
 ├── .sqa/                 <- CI/CD configuration files
-│
-└─ ai4-metadata.yml       <- Defines information propagated to the AI4OS Hub
+│ └─ ai4-metadata.yml       <- Defines information propagated to the AI4OS Hub
 ```
 
 You can validate the `ai4-metadata.yml` before making a git push using:
