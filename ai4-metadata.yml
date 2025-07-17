@@ -1,0 +1,91 @@
+metadata_version: 2.0.0
+title: Diatom classification at the species level
+summary: "Diatoms classification at the species level using Yolov8-cls of Ultralytics."
+description: |-
+  diamorph_classification is an application using the DEEPaaS API.
+
+  It is designed to classify individual diatoms at the species level. 
+  The provided image is expected to be $512 \times 512$ at a scale of
+  0.1 µm/pixel .
+
+  This preprocessing can be performed using the `square-pad.py` script provided
+  on the github repository.
+
+  It is based on a pre-trained yolov8-cls that has been finetuned on manually
+  labeled data.
+
+  This application only provides the inference endpoint.
+
+
+  <img class='fit', src='https://raw.githubusercontent.com/ai4os-hub/diamorph-classification/main/data/val_batch.jpg'/>
+  
+  **History and contributors**
+
+  The project was initiated by the PhD of Aishwarya Venkataramanan using YoloV5 working on both detection and classification [1], cosupervized by Cédric Pradalier and Martin Laviale. Aisharya developed a hierarchical classification system. Thanks to the support of PNRIA (Programme National de Recherche en Intelligence Artificielle) and the work of Cyril Regan, the code base was improved [2]. The project was finally ported
+  to the iMagine platform with Yolov8 by Jeremy Fix. This ported code does not yet support hierarchical classification.
+
+  The database used to train the Yolov8 is made of Atlas images of single individuals. After excluding classes with fewer than 10 images, the datasets comprised 93 classes at the genus level (ranging from 14 to 3221 images/class) and 462 classes (ranging from 11 to 342 images/class) at the species level.
+
+  **References**
+
+  1. Aishwarya Venkataramanan. [Automatic identification of diatoms using deep learning to improve ecological diagnosis of aquatic environments](https://theses.hal.science/tel-04643505). Université de Lorraine, 2023. English.
+  2. [https://www.ins2i.cnrs.fr/fr/diamorph-identification-automatique-des-diatomees-par-apprentissage-profond-partir-dimages](https://www.ins2i.cnrs.fr/fr/diamorph-identification-automatique-des-diatomees-par-apprentissage-profond-partir-dimages)
+
+# doi: http://add-some-DOI-url.com
+dates:
+  created: '2025-07-17'
+  updated: '2025-07-17'
+links:
+  ai4_template: ai4-template-child/2.1.1
+  source_code: https://github.com/ai4os-hub/diamorph-classification
+  docker_image: ai4oshub/diamorph-classification
+  # documentation: http://add-some-documentation.com
+  # dataset: http://add-some-url-pointing-to-your-dataset.com
+  # weights: http://add-some-weights-url.com
+  # citation: http://add-some-DOI-url.com
+  # base_model: http://add-some-link-to-another-model.com
+tags:        # required property, add user-defined tags that you consider relevant
+  - deep learning
+  - diatoms classification
+  - vo.imagine-ai.eu
+tasks:       # required property, uncomment together with relevant items
+  - Computer Vision
+  # - Natural Language Processing
+  # - Time Series
+  # - Recommender Systems
+  # - Anomaly Detection
+  # - Regression
+  # - Classification
+  # - Clustering
+  # - Dimensionality Reduction
+  # - Generative Models
+  # - Graph Neural Networks
+  # - Optimization
+  # - Reinforcement Learning
+  # - Transfer Learning
+  # - Uncertainty Estimation
+  # - Other
+categories:  # required property, uncomment together with relevant items
+  # - AI4 trainable
+  # - AI4 pre trained
+  - AI4 inference
+  # - AI4 tools
+libraries:   # required property, uncomment together with relevant items
+  # - TensorFlow
+  - PyTorch
+  # - Keras
+  # - Scikit-learn
+  # - XGBoost
+  # - LightGBM
+  # - CatBoost
+  # - Other
+data-type:   # optional, uncomment together with relevant items
+  - Image
+  # - Text
+  # - Time Series
+  # - Tabular
+  # - Graph
+  # - Audio
+  # - Video
+  # - Other
+  

@@ -1,0 +1,44 @@
+{
+    "title": "Diatom classification",
+    "summary": "Diatoms classification at the species level using Yolov8-cls of Ultralytics.",
+    "description": [
+        "diamorph_classification is an application using the DEEPaaS API.\n",
+        "\n", 
+        "It is designed to classify individual diatoms at the species level.\n",
+        "The provided image is expected to be $512 \times 512$ at a scale of 0.1 µm/pixel .\n",
+        "This preprocessing can be performed using the `square-pad.py` script provided on the github repository.\n",
+        "\n",
+        "It is based on a pre-trained yolov8-cls that has been finetuned on manually labeled data.\n",
+        "\n",
+        "This application only provides the inference endpoint.\n"
+    ],
+    "keywords": [
+        "docker",
+        "api-v2"
+    ],
+    "license": "AGPL-3.0-only",
+    "date_creation": "2025-07-17",
+    "sources": {
+        "dockerfile_repo": "https://github.com/ai4os-hub/diamorph-classification",
+        "docker_registry_repo": "ai4oshub/diamorph-classification",
+        "code": "https://github.com/ai4os-hub/diamorph-classification",
+        "ai4_template": "ai4-template-child/2.1.1"
+	},
+    "continuous_integration": {
+        "build_status_badge": "https://jenkins.services.ai4os.eu/buildStatus/icon?job=AI4OS-hub/diamorph-classification/main",
+        "build_status_url": "https://jenkins.services.ai4os.eu/job/AI4OS-hub/job/diamorph-classification/job/main/"
+    },
+    "tosca": [
+        {
+            "title": "Mesos (CPU)",
+            "url": "https://raw.githubusercontent.com/indigo-dc/tosca-templates/master/deep-oc/deep-oc-marathon-webdav.yml",
+            "inputs": [
+                "rclone_conf",
+                "rclone_url",
+                "rclone_vendor",
+                "rclone_user",
+                "rclone_pass"
+            ]
+        }
+    ]
+}
