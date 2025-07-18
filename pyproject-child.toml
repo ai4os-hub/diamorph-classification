@@ -43,4 +43,4 @@ dependencies = { file = ["requirements.txt"] }
 version = { file = "VERSION" }
 
 [project.entry-points."deepaas.v2.model"]
-diamorph_classification = "diamorph-classification.api"
+diamorph_classification = "diamorph_classification.api"
