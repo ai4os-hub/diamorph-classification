@@ -2,7 +2,7 @@
 sqa_criteria:
   qc_style:
     repos:
-      diamorph-detection:
+      diamorph-classification:
         container: thisrepo-testing
         commands:
           - echo "[Check that Dockerfile and JenkinsConstants.groovy exist"]
