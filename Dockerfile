@@ -40,5 +40,5 @@ COPY ./pyproject-child.toml /srv/ai4os-yolov8-torch/pyproject.toml
 RUN cd /srv/ai4os-yolov8-torch && pip install --no-cache -e .
 
 RUN mkdir -p /srv/ai4os-yolov8-torch/models/$YOLOV8_DEFAULT_WEIGHTS/weights && \
-    curl -L https://github.com/ai4os-hub/diamorph-classification/releases/download/v0/best-species.pt \
+    curl -L https://github.com/ai4os-hub/diamorph-classification/releases/download/v0/species_best.pt \
     --output /srv/ai4os-yolov8-torch/models/$YOLOV8_DEFAULT_WEIGHTS/weights/best.pt
