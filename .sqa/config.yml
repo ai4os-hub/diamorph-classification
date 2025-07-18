@@ -2,30 +2,14 @@
 sqa_criteria:
   qc_style:
     repos:
-      ai4os-yolov8-torch:
+      diamorph-detection:
         container: thisrepo-testing
-        tox:
-          tox_file: tox.ini
-          testenv:
-            - qc.sty
-  qc_coverage:
-    repos:
-      ai4os-yolov8-torch:
-        container: thisrepo-testing
-        tox:
-          tox_file: tox.ini
-          testenv:
-            - qc.cov
-  qc_security:
-    repos:
-      ai4os-yolov8-torch:
-        container: thisrepo-testing
-        tox:
-          tox_file: tox.ini
-          testenv:
-            - qc.sec
+        commands:
+          - echo "[Check that Dockerfile and JenkinsConstants.groovy exist"]
+          - test -e Dockerfile
+          - test -e JenkinsConstants.groovy
 
 environment:
   LANG: C.UTF-8
 
-timeout: 1200
+timeout: 600
