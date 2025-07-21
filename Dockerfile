@@ -15,7 +15,7 @@ ARG tag=latest
 FROM ai4oshub/ai4os-yolov8-torch:${tag}
 
 LABEL maintainer='Jeremy Fix, Martin Laviale'
-LABEL version='0.0.1'
+LABEL version='0.0.2'
 # Diatom classification 
 
 # Download new model weights and remove old ones
@@ -40,5 +40,5 @@ COPY ./pyproject-child.toml /srv/ai4os-yolov8-torch/pyproject.toml
 RUN cd /srv/ai4os-yolov8-torch && pip install --no-cache -e .
 
 RUN mkdir -p /srv/ai4os-yolov8-torch/models/$YOLOV8_DEFAULT_WEIGHTS/weights && \
-    curl -L https://github.com/ai4os-hub/diamorph-classification/releases/download/v0/species_best.pt \
+    curl -L https://github.com/ai4os-hub/diamorph-classification/releases/download/v1/species_best.pt \
     --output /srv/ai4os-yolov8-torch/models/$YOLOV8_DEFAULT_WEIGHTS/weights/best.pt

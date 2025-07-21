@@ -5,17 +5,18 @@ description: |-
   diamorph_classification is an application using the DEEPaaS API.
 
   It is designed to classify individual diatoms at the species level. 
-  The provided image is expected to be $512 \times 512$ at a scale of
-  0.1 µm/pixel .
+
+  The provided image is expected to be 512x512 at a scale of 0.1 µm/pixel .
 
   This preprocessing can be performed using the `square-pad.py` script provided
-  on the github repository.
+  on the github repository. In any case, in the current version of deployed application,
+  you **must** perform this pre-preprocessing on your side.
 
-  It is based on a pre-trained yolov8-cls that has been finetuned on manually
-  labeled data.
+  Also, in the currently deployed version of the application, you must adapt the parameters on the gradio interface. The image size must be set to 512.
+
+  It is based on a pre-trained yolov8-cls that has been finetuned on manually labeled data.
 
   This application only provides the inference endpoint.
-
 
   <img class='fit', src='https://raw.githubusercontent.com/ai4os-hub/diamorph-classification/main/data/val_batch.jpg'/>
   
@@ -24,7 +25,7 @@ description: |-
   The project was initiated by the PhD of Aishwarya Venkataramanan using YoloV5 working on both detection and classification [1], cosupervized by Cédric Pradalier and Martin Laviale. Aisharya developed a hierarchical classification system. Thanks to the support of PNRIA (Programme National de Recherche en Intelligence Artificielle) and the work of Cyril Regan, the code base was improved [2]. The project was finally ported
   to the iMagine platform with Yolov8 by Jeremy Fix. This ported code does not yet support hierarchical classification.
 
-  The database used to train the Yolov8 is made of Atlas images of single individuals. After excluding classes with fewer than 10 images, the datasets comprised 93 classes at the genus level (ranging from 14 to 3221 images/class) and 462 classes (ranging from 11 to 342 images/class) at the species level.
+  The database used to train the Yolov8 is made of Atlas images of single individuals. After excluding classes with fewer than 10 images, the datasets comprised 108 classes at the genus level (ranging from 11 to 4390 images/class) and 547 classes (ranging from 10 to 395 images/class) at the species level.
 
   **References**
 
@@ -34,7 +35,7 @@ description: |-
 # doi: http://add-some-DOI-url.com
 dates:
   created: '2025-07-17'
-  updated: '2025-07-17'
+  updated: '2025-07-21'
 links:
   ai4_template: ai4-template-child/2.1.1
   source_code: https://github.com/ai4os-hub/diamorph-classification
