@@ -25,7 +25,7 @@ description: |-
   The project was initiated by the PhD of Aishwarya Venkataramanan using YoloV5 working on both detection and classification [1], cosupervized by Cédric Pradalier and Martin Laviale. Aisharya developed a hierarchical classification system. Thanks to the support of PNRIA (Programme National de Recherche en Intelligence Artificielle) and the work of Cyril Regan, the code base was improved [2]. The project was finally ported
   to the iMagine platform with Yolov8 by Jeremy Fix. This ported code does not yet support hierarchical classification.
 
-  The database used to train the Yolov8 is made of Atlas images of single individuals. After excluding classes with fewer than 10 images, the datasets comprised 108 classes at the genus level (ranging from 11 to 4390 images/class) and 547 classes (ranging from 10 to 395 images/class) at the species level.
+  The database used to train the Yolov8 is made of Atlas images of single individuals. After excluding classes with fewer than 10 images, the datasets comprised 108 classes at the genus level (ranging from 11 to 4527 images/class) and 548 classes (ranging from 11 to 395 images/class) at the species level.
 
   **References**
 
@@ -35,7 +35,7 @@ description: |-
 # doi: http://add-some-DOI-url.com
 dates:
   created: '2025-07-17'
-  updated: '2025-07-21'
+  updated: '2025-07-25'
 links:
   ai4_template: ai4-template-child/2.1.1
   source_code: https://github.com/ai4os-hub/diamorph-classification
