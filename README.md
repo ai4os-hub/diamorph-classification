@@ -4,7 +4,7 @@
 
 Diatom classification at the species level.
 
-This is a container that will run the diamorph-classification application leveraging the DEEP as a Service API component ([DEEPaaS API](https://github.com/ai4os/DEEPaaS)). The application is based on **ai4oshub/ai4os-yolov8-torch** module.
+This is a container that will run the diamorph-classification application leveraging the DEEP as a Service API component ([DEEPaaS API](https://github.com/ai4os/DEEPaaS)). The application is based on **ai4oshub/ai4os-yolo-torch** module.
 
     
 ## Running the container
