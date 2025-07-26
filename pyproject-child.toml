@@ -32,11 +32,11 @@ env = ["DATA_PATH=tests/data", "MODELS_PATH=tests/models"]
 addopts = "--import-mode=importlib"
 
 [tool.setuptools]
-packages = ["yolov8_api", "diamorph_classification.api"]
+packages = ["ai4os_yolo", "diamorph_classification.api"]
 
 [tool.setuptools.package-dir]
 "diamorph_classification.api" = "api"
-"yolov8_api" = "yolov8_api"
+"ai4os_yolo" = "ai4os_yolo"
 
 [tool.setuptools.dynamic]
 dependencies = { file = ["requirements.txt"] }
