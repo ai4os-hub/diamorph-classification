@@ -42,3 +42,6 @@ RUN cd /srv/ai4os-yolo-torch && pip install --no-cache -e .
 RUN mkdir -p /srv/ai4os-yolo-torch/models/$YOLO_DEFAULT_WEIGHTS/weights && \
     curl -L	https://github.com/ai4os-hub/diamorph-classification/releases/download/v2/species_yolov8l_best.pt \
     --output /srv/ai4os-yolo-torch/models/$YOLO_DEFAULT_WEIGHTS/weights/best.pt
+
+HEALTHCHECK --interval=5s --timeout=3s --start-period=10s --retries=5 \
+  CMD curl --fail http://localhost:5000/v2  
