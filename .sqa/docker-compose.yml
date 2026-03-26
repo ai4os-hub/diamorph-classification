@@ -1,7 +1,7 @@
+
 services:
   thisrepo-testing:
     image: "ai4oshub/ci-images:python3.10"
-    container_name: "${BUILD_TAG}"
     working_dir: /srv
     volumes:
       - type: bind
